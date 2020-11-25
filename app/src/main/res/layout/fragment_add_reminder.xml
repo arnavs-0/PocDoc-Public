@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="620dp"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".AddReminder" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Add a Medication"
+            android:textSize="18sp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Medication Name"
+            android:textColorHint="#787878"
+            app:boxStrokeColor="#2595C7"
+            app:endIconMode="clear_text"
+            app:endIconTint="#00B9FF"
+            app:hintTextColor="#2595C7"
+            app:shapeAppearance="@style/ShapeAppearance.Text"
+            app:startIconDrawable="@drawable/ic_settings"
+            app:startIconTint="#00B9FF"
+            android:layout_margin="15dp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_reminder_medication_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:hint="Medication Dosage"
+            android:textColorHint="#787878"
+            app:boxStrokeColor="#2595C7"
+            app:endIconMode="clear_text"
+            app:endIconTint="#00B9FF"
+            app:hintTextColor="#2595C7"
+            app:shapeAppearance="@style/ShapeAppearance.Text"
+            app:startIconDrawable="@drawable/ic_settings"
+            app:startIconTint="#00B9FF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_reminder_medication_dosage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Type of Medication"
+            android:textSize="14sp" />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/add_reminder_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <ca.antonious.materialdaypicker.MaterialDayPicker
+            android:id="@+id/add_reminder_day_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <TimePicker
+            android:id="@+id/add_reminder_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/add_reminder_add_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+    </LinearLayout>
+</ScrollView>

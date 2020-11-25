@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawerLayoutAddDiary"
+    tools:context=".AddDiary">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_adddiary"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_adddiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_menu" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_diary_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav_diary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/add_event_txt_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Add an Event"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.127"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar2"/>
+
+        <ImageView
+            android:id="@+id/add_diary_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.857"
+            app:layout_constraintStart_toEndOf="@+id/add_event_txt_diary"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+            app:srcCompat="@drawable/ic_undraw_add_tasks_mxew" />
+
+        <LinearLayout
+                android:id="@+id/diary_form"
+                android:layout_width="match_parent"
+                android:layout_height="470dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_diary_img" >
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_baseline_title_24"
+                    app:startIconTint="#00B9FF"
+                    app:shapeAppearance="@style/ShapeAppearance.Text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_diary_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/details"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Notes"
+                    app:endIconMode="clear_text"
+                    app:shapeAppearance="@style/ShapeAppearance.Text"
+                    app:startIconDrawable="@drawable/ic_baseline_home_24"
+                    app:startIconTint="#00B9FF" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_diary_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="5"
+                        android:minLines="4"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Severity Level"
+                    android:textSize="18sp"/>
+
+            <com.google.android.material.slider.Slider
+                    android:id="@+id/diary_pain_level"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="0.0"
+                    android:valueTo="10.0"
+                    android:stepSize="1.0"
+                    android:layout_gravity="center"
+                    app:thumbColor="@color/diary_green"
+                    app:trackColorActive="@color/diary_green"
+                    app:labelStyle="@style/Widget.MaterialComponents.Tooltip" />
+
+            <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:orientation="vertical">
+                    <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                            android:id="@+id/diary_symptom_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hintText="Symptom Select" />
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                    android:id="@+id/diary_add_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Add" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

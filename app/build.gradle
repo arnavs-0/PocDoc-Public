@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    defaultConfig {
+        applicationId "com.arnav.pocdoc"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 2
+        versionName "1.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.material:material:1.3.0-alpha04'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-identity:17.0.0'
+    implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT'
+    implementation 'com.google.firebase:firebase-database:19.5.1'
+    implementation 'com.firebaseui:firebase-ui-database:7.1.0'
+    implementation 'com.ramotion.paperonboarding:paper-onboarding:1.1.3'
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+    implementation 'net.steamcrafted:load-toast:1.0.12'
+    implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.3'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.20'
+    implementation 'ca.antonious:materialdaypicker:0.7.3'
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+    implementation 'com.github.jakebonk:NotifyMe:1.0.1'
+    implementation 'com.clarifai:clarifai-grpc:6.11.0'
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+    implementation "com.airbnb.android:lottie:3.5.0"
+    
+}

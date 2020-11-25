@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authentication.Registration"
+    android:background="@drawable/background_registration">
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/regbar"
+        style="@style/Widget.MaterialProgressBar.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="#42A5F5"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:mpb_progressStyle="circular"
+        app:mpb_showProgressBackground="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Registration"
+            android:textColor="#2595C7"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="#00B9FF"
+            android:hint="First Name"
+            app:boxStrokeColor="#2595C7"
+            app:shapeAppearance="@style/ShapeAppearance.Text"
+            android:textColorHint="#787878"
+            app:hintTextColor="#2595C7"
+            app:endIconMode="clear_text"
+            app:endIconTint="#00B9FF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="#00B9FF"
+            android:hint="Last Name"
+            app:boxStrokeColor="#2595C7"
+            app:shapeAppearance="@style/ShapeAppearance.Text"
+            android:textColorHint="#787878"
+            app:hintTextColor="#2595C7"
+            app:endIconMode="clear_text"
+            app:endIconTint="#00B9FF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:startIconDrawable="@drawable/baseline_email_24px"
+            app:startIconTint="#00B9FF"
+            android:hint="Email Address"
+            app:boxStrokeColor="#2595C7"
+            app:shapeAppearance="@style/ShapeAppearance.Text"
+            android:textColorHint="#787878"
+            app:hintTextColor="#2595C7"
+            app:endIconMode="clear_text"
+            app:endIconTint="#00B9FF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="#00B9FF"
+            android:hint="Password"
+            app:boxStrokeColor="#2595C7"
+            app:shapeAppearance="@style/ShapeAppearance.Text"
+            android:textColorHint="#787878"
+            app:hintTextColor="#2595C7"
+            app:endIconMode="password_toggle"
+            app:endIconTint="#00B9FF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:startIconDrawable="@drawable/ic_check_box"
+            app:startIconTint="#00B9FF"
+            android:hint="Confirm Password"
+            app:boxStrokeColor="#2595C7"
+            app:shapeAppearance="@style/ShapeAppearance.Text"
+            android:textColorHint="#787878"
+            app:hintTextColor="#2595C7"
+            app:endIconMode="password_toggle"
+            app:endIconTint="#00B9FF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_button"
+            android:layout_gravity="center"
+            app:elevation="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Register"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/ubuntu_bold"
+            style="@style/Widget.MaterialComponents.Button"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="15dp"
+            android:src="@drawable/or"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_up_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center" />
+        <Button
+            android:id="@+id/haveaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have an account?"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:textColor="#818181"
+            android:textSize="10sp"
+            android:fontFamily="@font/ubuntu"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

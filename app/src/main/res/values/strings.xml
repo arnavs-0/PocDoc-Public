@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">PocDoc</string>
+
+    <string name="empty_text">N/A</string>
+
+
+    <string name="firebase_url">https://fcm.googleapis.com/fcm/send</string>
+    <array name="medication_types">
+        <item>Pill</item>
+        <item>Liquid</item>
+        <item>Tablet</item>
+        <item>Capsule</item>
+        <item>Inhaler</item>
+        <item>Injection</item>
+        <item>Other</item>
+    </array>
+    <string name="base_api_url">https://pocdocapi.herokuapp.com</string>
+    <string name="bullet_point">\u2022</string>
+    <string name="disclaimer">*PocDoc is not a replacement for a doctor. Please consult a doctor or health professional before taking any action or medication</string>
+    <string name="navigation_drawer_open">Open the Navigation Drawer</string>
+    <string name="navigation_drawer_close">Open the Navigation Drawer</string>
+    <string name="dialog_emg_title">Make an Emergency Call</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="infermedica_id">8f75bec1</string>
+    <string name="infermedica_key">34cf0f251be2c02bab295d78b7cd78b6</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <!--    <string name="default_web_client_id">28431014986-bpk1g6ghe7et1slkck7phigv2ee41da0.apps.googleusercontent.com</string>-->
+
+
+
+</resources>

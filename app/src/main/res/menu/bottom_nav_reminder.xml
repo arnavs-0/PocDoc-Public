@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_reminder_home"
+        android:title="Home"
+        android:icon="@drawable/ic_outline_home_24"
+        app:cnb_backgroundColor="@color/colorPrimary"/>
+    <item
+        android:id="@+id/bottom_reminder_edit"
+        android:title="Edit"
+        android:icon="@drawable/ic_outline_edit_24"
+        app:cnb_backgroundColor="@color/colorPrimary"/>
+    <item
+        android:id="@+id/bottom_reminder_help"
+        android:title="Help"
+        android:icon="@drawable/ic_outline_help_outline_24"
+        app:cnb_backgroundColor="@color/colorPrimary"/>
+</menu>

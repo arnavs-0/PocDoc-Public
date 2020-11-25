@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MedicalId"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="center"
+            android:text="Set Up Medical ID"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="212dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="165dp"
+            android:src="@drawable/medicalid"
+            android:layout_gravity="center"/>
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="85dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/imageView">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Name"/>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <com.ramotion.foldingcell.FoldingCell
+        android:id="@+id/patient_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clipToPadding="false">
+
+        <FrameLayout
+            android:id="@+id/patient_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg_med"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#F4F4F4"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/location_med_id"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/ic_outline_pin_drop_24"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="30dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignStart="@id/location_med_id"
+                                android:text="Location"
+                                android:layout_marginStart="40dp"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/ubuntu"/>
+                            <TextView
+                                android:id="@+id/location_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/location_med_id"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginStart="40dp"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/ubuntu"/>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#F4F4F4"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/card_med_id"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/ic_outline_credit_card_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@id/card_med_id"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="30dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:text="Patient ID"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/patient_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/card_med_id"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#F4F4F4"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/email_med_id"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/ic_outline_email_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@id/email_med_id"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="30dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:text="Email"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/email_med"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/email_med_id"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#F4F4F4"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/insurance_med_id"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/ic_outline_verified_user_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@id/insurance_med_id"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="30dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:text="Insurance"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/insurance_med"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/insurance_med_id"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/patient_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="Edit"/>
+            <TextView
+                android:layout_height="275dp"
+                android:layout_width="wrap_content"/>
+        </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/patient_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_bg_med"
+                    android:elevation="30dp">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:background="#FFFFFF"
+                        android:src="@drawable/ic_outline_info_24"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:text="Patient Information"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorPrimary"/>
+
+            </FrameLayout>
+        </com.ramotion.foldingcell.FoldingCell>
+
+        <com.ramotion.foldingcell.FoldingCell
+            android:id="@+id/general_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:additionalFlipsCount="0">
+            <FrameLayout
+                android:id="@+id/general_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg_med"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/age_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/heart_blue"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/age_med_id"
+                                    android:text="Age"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/age_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/age_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/gender_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/gender_blue" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignStart="@id/gender_med_id"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:fontFamily="@font/ubuntu"
+                                    android:text="Gender"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/gender_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/gender_med_id"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textSize="20sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/height_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_height_96"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/height_med_id"
+                                    android:text="Height"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/height_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/height_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/weight_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_scale_64"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/weight_med_id"
+                                    android:text="Weight"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/weight_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/weight_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/blood_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/blue_blood"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/blood_med_id"
+                                    android:text="Blood Type"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/blood_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/blood_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/race_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_multicultural_people_100"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/race_med_id"
+                                    android:text="Race"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/race_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/race_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/general_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="Edit" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/general_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg_med">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_outline_settings_24" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="General"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimary"/>
+
+            </FrameLayout>
+        </com.ramotion.foldingcell.FoldingCell>
+        <com.ramotion.foldingcell.FoldingCell
+            android:id="@+id/medical_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:additionalFlipsCount="0">
+            <FrameLayout
+                android:id="@+id/medical_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg_med"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/con_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_medical_history_96"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/con_med_id"
+                                    android:text="Conditions"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/condition_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/con_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/family_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_family_96" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignStart="@id/family_med_id"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:fontFamily="@font/ubuntu"
+                                    android:text="Family History"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/family_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/family_med_id"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/ubuntu"
+                                    android:textSize="20sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/pressure_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_pressure_30"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/pressure_med_id"
+                                    android:text="BP Level"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/pressure_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/pressure_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/sugar_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_glucometer_30"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/sugar_med_id"
+                                    android:text="Sugar"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/sugar_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/sugar_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/allergies_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_sneeze_96"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/allergies_med_id"
+                                    android:text="Allergies"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/allergies_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/allergies_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/habits_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/icons8_no_food_96"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/habits_med_id"
+                                    android:text="Habits"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/habit_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/habits_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/otc_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/pill_hand"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/otc_med_id"
+                                    android:text="OTC Medication"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/otc_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/otc_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#F4F4F4"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/rx_med_id"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/prescription"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignStart="@id/rx_med_id"
+                                    android:text="RX Medication"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+                                <TextView
+                                    android:id="@+id/rx_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rx_med_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/ubuntu"/>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/medical_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="Edit"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/medical_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg_med">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_outline_local_hospital_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Medical"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimary"/>
+
+            </FrameLayout>
+        </com.ramotion.foldingcell.FoldingCell>
+
+        <Button
+            android:id="@+id/continue_med_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:layout_gravity="center"
+            style="?attr/materialButtonOutlinedStyle"/>
+    </LinearLayout>
+
+</ScrollView>
