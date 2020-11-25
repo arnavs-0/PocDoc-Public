@@ -8,7 +8,7 @@
 
 
 
-A One Stop Medical Assistant. Features include: Diary, Symptom Checker, Allergy Finder, Hospital/Pharmacy Finder, and Medication Tracker. Implemented with the use of Firebase and Google ML, and Clarifai
+A One Stop Medical Assistant. Features include: Diary, Symptom Checker, Allergy Finder, Hospital/Pharmacy Finder, and Medication Tracker. Implemented with the use of Firebase and Google ML, and Clarifai. Now Open Source!
 
 
 
