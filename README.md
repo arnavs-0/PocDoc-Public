@@ -11,6 +11,7 @@
 A One Stop Medical Assistant, including a Diary, Symptom Checker, Allergy Finder, Hospital/Pharmacy Locator, and Medication Tracker. Implemented using Firebase, Google ML, and Clarifai. Now Open Source!
 
 
+Have any problems or questions? Open an Issue!
 
 
 ## Tools
