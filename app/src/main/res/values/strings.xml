@@ -24,13 +24,5 @@
     <string name="dialog_emg_title">Make an Emergency Call</string>
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
-    <string name="infermedica_id">8f75bec1</string>
-    <string name="infermedica_key">34cf0f251be2c02bab295d78b7cd78b6</string>
     <string name="title_activity_maps">Map</string>
-
-
-    <!--    <string name="default_web_client_id">28431014986-bpk1g6ghe7et1slkck7phigv2ee41da0.apps.googleusercontent.com</string>-->
-
-
-
 </resources>
