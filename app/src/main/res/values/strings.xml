@@ -16,7 +16,7 @@
         <item>Injection</item>
         <item>Other</item>
     </array>
-    <string name="base_api_url">https://pocdocapi.herokuapp.com</string>
+    <string name="base_api_url">YOUR_API_URL_HERE</string>
     <string name="bullet_point">\u2022</string>
     <string name="disclaimer">*PocDoc is not a replacement for a doctor. Please consult a doctor or health professional before taking any action or medication</string>
     <string name="navigation_drawer_open">Open the Navigation Drawer</string>
