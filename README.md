@@ -89,5 +89,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2020 [Arnav Shah](https://github.com/arnavs-0) & [Vishal Dattathreya](https://github.com/cmdvmd).<br />
+Copyright © 2020-2021 [Arnav Shah](https://github.com/arnavs-0) & [Vishal Dattathreya](https://github.com/cmdvmd).<br />
 This project is [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) licensed.
