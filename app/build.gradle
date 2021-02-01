@@ -48,7 +48,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
     implementation 'com.google.android.gms:play-services-identity:17.0.0'
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
-    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
     implementation 'com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT'
     implementation 'com.google.firebase:firebase-database:19.5.1'
     implementation 'com.firebaseui:firebase-ui-database:7.1.1'
