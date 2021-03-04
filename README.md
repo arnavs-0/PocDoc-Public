@@ -1,4 +1,4 @@
-[![Logo](/.github/Untitled%20design%20(3).png)](https://github.com/arnavs-0/PocDoc)
+<img alt="logo" src="/.github/Untitled%20design%20(3).png" align="right" width="200" height="200" />
 
 <h1 align="center">Welcome to PocDoc 👋</h1>
 <p>
