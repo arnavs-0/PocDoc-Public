@@ -56,7 +56,7 @@ dependencies {
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
     implementation 'net.steamcrafted:load-toast:1.0.12'
     implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.4'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.21-2'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.31'
     implementation 'ca.antonious:materialdaypicker:0.7.4'
     implementation 'com.jaredrummler:material-spinner:1.3.1'
     implementation 'com.github.jakebonk:NotifyMe:1.0.1'
