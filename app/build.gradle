@@ -60,7 +60,7 @@ dependencies {
     implementation 'ca.antonious:materialdaypicker:0.7.4'
     implementation 'com.jaredrummler:material-spinner:1.3.1'
     implementation 'com.github.jakebonk:NotifyMe:1.0.1'
-    implementation 'com.clarifai:clarifai-grpc:7.2.0'
+    implementation 'com.clarifai:clarifai-grpc:7.3.0'
     implementation 'com.github.GrenderG:Toasty:1.4.2'
     implementation 'com.google.android.libraries.places:places:2.4.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
